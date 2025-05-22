@@ -7,21 +7,22 @@ apply from: project(':common').projectDir.absolutePath + '/variables.gradle'
 
 buildscript {
     repositories {
+        mavenCentral()
         google()
-        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:8.10.0'
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.6'
     }
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
     maven {
-        url 'https://maven.google.com'
+        url 'https://plugins.gradle.org/m2' //'https://maven.google.com'
     }
+    google()
 }
 
 sourceSets {
